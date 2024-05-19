@@ -24,7 +24,7 @@
                             </span>
                             <div class="media-body">
                                 <h3 class="mb-0 text-black"><span class="counter ml-0">56</span></h3>
-                                <p class="mb-0">Total Menus</p>
+                                <p class="mb-0">Total Parfum</p>
                                 <small>4% (30 days)</small>
                             </div>
                         </div>

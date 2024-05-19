@@ -51,7 +51,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-							<img class="logo-abbr" src="{{asset('admin/images/favicon.png')}}"class="rounded-lg mr-3" width ="150px" height="150px"   alt="">
+							<img class="logo-abbr" src=""class="rounded-lg mr-3" width ="150px" height="150px"   alt="">
 				
             </a>
 

@@ -21,7 +21,7 @@
 					<li class="nav-item dropdown header-profile">
 						<a class="nav-link" href="#" role="button" data-toggle="dropdown">
 							<div class="header-info">
-								<span>Bonjour, <strong>{{$data->name}}</strong></span>
+								<span>Bonjour, <strong></strong></span>
 							</div>
 							<img src="{{ asset('admin/images/profile/profile.webp') }}" width="250" alt=""/>
 						</a>
