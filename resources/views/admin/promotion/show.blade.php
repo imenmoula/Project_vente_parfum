@@ -27,7 +27,7 @@
                         <p>date fin: <b>{{ $promotion->date_fin }}</b></p>
                         <p>Pourcentage: <b>{{ $promotion->pourcentage }}</b></p>
                         <p>Prix ancienne: <b>{{ $promotion->parfum->prix }}</b></p>
-                        <p>prix nouveau: <b>{{ $promotion->parfum->prix / $promotion->pourcentage * 100 }}</b></p>
+                        <p>prix nouveau: <b>{{ $promotion->parfum->prix - ($promotion->parfum->prix * $promotion->pourcentage / 100) }}</b></p>
 
                         <p>Date creation : <b>{{ $promotion->created_at }}</b></p>
                         <p>Date modification : <b>{{ $promotion->updated_at }}</b></p>
