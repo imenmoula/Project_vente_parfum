@@ -39,7 +39,7 @@ class CategoryController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time() . '.' . $ext;
-            $file->move('/uploads/parfum/', $filename);
+            $file->move('uploads/parfum/', $filename);
             $category->image = $filename;
         }
     
@@ -78,7 +78,7 @@ public function update(Request $request, $id)
         $file = $request->file('image');
         $ext = $file->getClientOriginalExtension();
         $filename = time() . '.' . $ext;
-        $file->move('assets/uploads/parfum/', $filename);
+        $file->move('uploads/parfum/', $filename);
         $category->image = $filename;
     }
 
