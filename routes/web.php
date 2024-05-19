@@ -5,8 +5,7 @@ use App\Http\Controllers\AuthenController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ParfumController;
 use App\Http\Controllers\UserController;
-
-
+use App\Http\Controllers\Admin\PromotionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +48,13 @@ Route::prefix('admin')->group(function () {
     Route::put('parfums/{id}', [ParfumController::class, 'update'])->name('admin.parfums.update');
     Route::delete('parfums/{id}', [ParfumController::class, 'destroy'])->name('admin.parfums.destroy');
     Route::get('parfums/{id}', [ParfumController::class, 'show'])->name('admin.parfums.show');
+    Route::get('promotions/index', [PromotionController::class, 'index'])->name('admin.promotion.index');
+    Route::get('promotions/create', [PromotionController::class, 'create'])->name('admin.promotion.create');
+    Route::post('promotions', [PromotionController::class, 'store'])->name('admin.promotion.store');
+    Route::get('promotions/{id}/edit', [PromotionController::class, 'edit'])->name('admin.promotion.edit');
+    Route::put('promotions/{id}', [PromotionController::class, 'update'])->name('admin.promotion.update');
+    Route::delete('promotions/{id}', [PromotionController::class, 'destroy'])->name('admin.promotion.destroy');
+    Route::get('promotions/{id}', [PromotionController::class, 'show'])->name('admin.promotion.show');
 
 });
 
