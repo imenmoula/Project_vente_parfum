@@ -20,4 +20,12 @@ class Category extends Model
        'sexe',
 
     ];
+    public function parfum()
+    {
+        return $this->hasMany(Parfum::class,'category_id','id');
+    }
+    public function promotion()
+    {
+        return $this->hasMany(Promotion::class,'category_id','id');
+    }
 }

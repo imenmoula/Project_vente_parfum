@@ -42,6 +42,16 @@ Route::prefix('admin')->group(function () {
     Route::put('categories/{id}', [CategoryController::class, 'update'])->name('admin.categories.update');
     Route::delete('categories/{id}', [CategoryController::class, 'destroy'])->name('admin.categories.destroy');
     Route::get('categories/{id}', [CategoryController::class, 'show'])->name('admin.categories.show');
+    Route::get('parfums/index', [ParfumController::class, 'index'])->name('admin.parfums.index');
+    Route::get('parfums/create', [ParfumController::class, 'create'])->name('admin.parfums.create');
+    Route::post('parfums', [ParfumController::class, 'store'])->name('admin.parfums.store');
+    Route::get('parfums/{id}/edit', [ParfumController::class, 'edit'])->name('admin.parfums.edit');
+    Route::put('parfums/{id}', [ParfumController::class, 'update'])->name('admin.parfums.update');
+    Route::delete('parfums/{id}', [ParfumController::class, 'destroy'])->name('admin.parfums.destroy');
+    Route::get('parfums/{id}', [ParfumController::class, 'show'])->name('admin.parfums.show');
+
 });
 
 Route::get('User/index', 'UserController@index')->name('User.index');
+
+

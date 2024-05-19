@@ -21,8 +21,6 @@ return new class extends Migration
             $table->string('image', 255)->nullable();
             $table->decimal('volume', 10, 2);
             $table->string('genre', 255);
-            $table->dateTime('date_creation');
-            $table->dateTime('date_update');
             $table->string('marque', 255);
             $table->timestamps();
         });

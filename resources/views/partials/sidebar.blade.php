@@ -9,7 +9,7 @@
                 </a>
             </li>
 
-            <li><a href="" class="ai-icon" aria-expanded="false">
+            <li><a href="{{ url('admin/parfums/index') }}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
                     <span class="nav-text">Parfum</span>
                 </a>
@@ -22,7 +22,7 @@
            </li>
 
             <li>
-                <a href="{{ url('admin/categories/index') }}" class="ai-icon" aria-expanded="false">
+                <a href="#" class="ai-icon" aria-expanded="false">
                     
                     <span class="nav-text">Commande</span>
                 </a>

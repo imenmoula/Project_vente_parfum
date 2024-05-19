@@ -64,7 +64,7 @@
                                                     @csrf
                                                     @method('DELETE')
                                                 
-                                                    <button type='submit' class="btn btn-danger shadow btn-xs sharp"  onclick="return confirm('Tu veux supprimer cette categoires')" data-toggle="tooltip">
+                                                    <button type='submit' class="btn btn-danger shadow btn-xs sharp"  onclick="return confirm('Tu veux supprimer cette categoires{{ $category->nom }}')" data-toggle="tooltip">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </form>
