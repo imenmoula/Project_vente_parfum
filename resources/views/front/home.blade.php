@@ -95,7 +95,7 @@
 
 
 
-    {{-- <div class="cart-modal-wrapper">
+     <div class="cart-modal-wrapper">
         <div class="cart-modal modal-item">
             <div class="cart-modal-header">
                 <h3 class="color-white"></h3>
@@ -136,14 +136,14 @@
                     <h3> {{  $cartTotal }} DT</h3>
                 </div>
                 <div class="cart-modal-button">
-                    <a href="{{ route('cart.list') }}" class="btn full-width">Voir le panier </a>
-                    <a href="{{ route('front.includes.checkout')  }}" class="btn btn-yellow full-width">Commander</a>
+                    <a href="#" class="btn full-width">Voir le panier </a>
+                    <a href="#" class="btn btn-yellow full-width">Commander</a>
                 </div>
 
 
             </div>
         </div>
-    </div>--}} 
+    </div>
 
    
     <div class="scroll-top" id="scrolltop">
