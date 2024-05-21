@@ -61,7 +61,7 @@ Route::get('User/index', 'UserController@index')->name('User.index');
 
 Route::prefix('front')->group(function () {
     Route::get('/includes/{id}/parfum', [FrontController::class, 'view'])->name('front.includes.parfum');
-    Route::post('/includes/{id}/detailParfum', [FrontController::class,'detailParfums'])->name('front.includes.detailParfum');
+    Route::get('/includes/{id}/detailParfum', [FrontController::class,'detailParfums'])->name('front.includes.detailParfum');
 
 
 
