@@ -16,17 +16,19 @@ class AuthenController extends Controller
     }
     public function registerUser(Request $request)
     {
+       
         $request->validate([
             'name'=>'required',
             'email'=>'required|email:users',
-            'password'=>'required|min:8|max:12'
+            'password'=>'required|min:8|max:12',
+            
         ]);
 
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
-
+       
         $result = $user->save();
         if($result){
             return back()->with('success','You have registered successfully.');
@@ -34,6 +36,8 @@ class AuthenController extends Controller
             return back()->with('fail','Something wrong!');
         }
     }
+ 
+
     ////Login
     public function login()
     {
@@ -61,7 +65,6 @@ class AuthenController extends Controller
     //// Dashboard
     public function dashboard()
     {
-        // return "Welcome to your dashabord.";
         $data = array();
         if(Session::has('loginId')){
             $data = User::where('id','=',Session::get('loginId'))->first();

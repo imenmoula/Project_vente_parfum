@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ParfumController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\PromotionController;
+use App\Http\Controllers\Front\FrontController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,11 +18,8 @@ use App\Http\Controllers\Admin\PromotionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
+Route::get('/', [FrontController::class, 'index'])->name('front.home');
 Route::controller(AuthenController::class)->group(function(){
     Route::get('/registration','registration')->middleware('alreadyLoggedIn');
     Route::post('/registration-user','registerUser')->name('register-user');
@@ -61,3 +59,10 @@ Route::prefix('admin')->group(function () {
 Route::get('User/index', 'UserController@index')->name('User.index');
 
 
+Route::prefix('front')->group(function () {
+    Route::get('/includes/{id}/parfum', [FrontController::class, 'view'])->name('front.includes.parfum');
+    Route::post('/includes/{id}/detailParfum', [FrontController::class,'detailParfums'])->name('front.includes.detailParfum');
+
+
+
+});
