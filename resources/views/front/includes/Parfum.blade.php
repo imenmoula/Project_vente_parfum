@@ -10,8 +10,8 @@
             <div class="row">
 
                 @foreach ($promotions as $promotion)
-                    @if ($promotion->p && $promotion->p->count() > 0)
-                        @foreach ($promotion->p as $p)
+                    @if ($promotion->parfum && $promotion->parfum->count() > 0)
+                        
                             <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1s"
                                 data-wow-delay="0.1s">
                                 <div class="combo-box-two">
@@ -22,24 +22,25 @@
                                     </div>
                                     <div class="combo-two-text">
                                         <h3>{{ $promotion->nom_promotio }}</h3>
+                                        <h5>Prix ancienne : {{ $promotion->parfum->prix }} dt</h5>
+                                        
+                                        <h5>Date début : {{ $promotion->date_debut }}</h5>
+                                        <h5>Date fin : {{ $promotion->date_fin }}</h5>
                                         <a href="" class="btn btn-border btn-small">
                                             Commander maintenant <i class="flaticon-shopping-cart-black-shape"></i>
                                         </a>
                                     </div>
                                     <div class="combo-offer-shape combo-offer-shape-red">
                                         <div class="combo-shape-inner">
-                                            <h1>Prix ancienne : {{ $promotion->p->prix }} dt</h1>
-                                            <small>Seulement à</small>
-                                            <h4>{{ $p->pourcentage }}%</h4>
-                                            <h2>Prix Nouveau :
-                                                {{ $promotion->p->prix * (1 - $promotion->pourcentage / 100) }} dt</h2>
-                                            <h1>Date début : {{ $promotion->date_debut }}</h1>
-                                            <h1>Date fin : {{ $promotion->date_fin }}</h1>
+                                            
+                                                <small>Seulement à</small>
+                                                <p> {{ $promotion->parfum->prix * (1 - $promotion->pourcentage / 100) }} dt</p>
+                                              
+                                           
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
                     @endif
                 @endforeach
 
