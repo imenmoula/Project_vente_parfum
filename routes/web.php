@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ParfumController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\PromotionController;
 use App\Http\Controllers\Front\FrontController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,3 +67,9 @@ Route::prefix('front')->group(function () {
 
 
 });
+
+Route::get('add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart.store');
+Route::delete('remove/{id}', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
+Route::patch('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');

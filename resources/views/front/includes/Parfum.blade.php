@@ -77,7 +77,7 @@
                                                     <h4>{{ $p->prix }}Dt</del></h4>
                                                 </div>
                                                 <div class="receipe-cart">
-                                                    <a href="#">
+                                                    <a href="{{ route('cart.store', $p->id) }}">
                                                         <i class="flaticon-supermarket-basket"></i>
                                                         <i class="flaticon-supermarket-basket"></i>
                                                     </a>
