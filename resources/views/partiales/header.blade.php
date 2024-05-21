@@ -70,7 +70,7 @@
                         <div class="dropdown-menu" aria-labelledby="mobileOptionDropdown">
                             <div class="navbar-option-item navbar-option-cart">
                                 <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-                                <span class="option-badge">2</span>
+                                <span class="option-badge">{{ $cart->count() }}</span>
                             </div>
                             <div class="navbar-option-item navbar-option-order">
                                 <a href="shops-grid.html" class="btn">
@@ -158,7 +158,7 @@
                     </div>
                     <div class="navbar-option-item navbar-option-cart mobile-block">
                         <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-                        <span class="option-badge">2</span>
+                        <span class="option-badge">{{ $cart->count() }}</span>
                     </div>
                     <div class="navbar-option-item navbar-option-order mobile-block">
                         <a href="shops-grid.html" class="btn">
@@ -213,7 +213,7 @@
                                 <a href="#" class="productCart">
                                     <i class="flaticon-supermarket-basket"></i>
                                 </a>
-                                <span class="option-badge"></span>
+                                <span class="option-badge">{{ $cart->count() }}</span>
                             </div>
                             
                             

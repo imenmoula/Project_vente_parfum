@@ -109,7 +109,7 @@
                 <div class="cart-modal-product">
                     <div class="cart-modal-thumb">
                         <a href="shop-details.html">
-                            <img src="{{ asset('assets/uploads/menus/' . $items->attributes->image) }}" alt="product">
+                            <img src="{{ asset('/uploads/parfum/' . $items->attributes->image) }}" alt="product">
                         </a>
                     </div>
                     <div class="cart-modal-content">
@@ -208,12 +208,12 @@
 
     <script src="{{ asset('user/assets/js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    {{-- @if($cart->count() > 0)
+     @if($cart->count() > 0)
     <script>
         function confirmDelete(itemId) {
             Swal.fire({
                 title: 'Êtes-vous sûr(e) ?',
-                text: "Cette action ne peut pas être annulée. Vous allez supprimer ce plat ",
+                text: "Cette action ne peut pas être annulée. Vous allez supprimer ce parfum ",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -227,7 +227,7 @@
             });
         }
     </script>
-    @endif --}}
+    @endif 
 
     <script>
         // Check if there's a success flash message
@@ -255,6 +255,5 @@
     </script>
 </body>
 
-<!-- Mirrored from templates.hibootstrap.com/fafo/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2024 11:54:59 GMT -->
 
 </html>
