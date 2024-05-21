@@ -22,7 +22,7 @@
                 <div class="col-sm-12 col-md-6 col-lg-4 order-1 order-lg-2">
                     <div class="footer-content-item text-start text-lg-center">
                         <div class="footer-logo">
-                            <a href="index.html"><img src="{{ asset('images/1.jfif') }}" alt="logo" > Parfum Elegant</a>
+                            <a href="index.html"><img src="{{ asset('images/1.jfif') }}" alt="logo" ></a>
                         </div>
                         <ul class="footer-details footer-address">
                             <li>8000 Nabeul.nabeul</li>

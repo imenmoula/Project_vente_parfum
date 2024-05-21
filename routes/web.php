@@ -8,6 +8,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\PromotionController;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\checkoutController;
+use App\Http\Controllers\Admin\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,6 +56,8 @@ Route::prefix('admin')->group(function () {
     Route::put('promotions/{id}', [PromotionController::class, 'update'])->name('admin.promotion.update');
     Route::delete('promotions/{id}', [PromotionController::class, 'destroy'])->name('admin.promotion.destroy');
     Route::get('promotions/{id}', [PromotionController::class, 'show'])->name('admin.promotion.show');
+    Route::get('order/index',  [OrderController::class, 'index'])->name('admin.order.index');
+     Route::get('order/{id}/show', [OrderController::class, 'show'])->name('admin.order.show');
 
 });
 
@@ -73,3 +77,11 @@ Route::delete('remove/{id}', [CartController::class, 'removeCart'])->name('cart.
 Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 Route::patch('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
+
+
+// commande 
+Route::get('/front/checkout', [checkoutController::class, 'checkout'])->name('front.includes.checkout');
+Route::post('/front/checkout/store', [checkoutController::class, 'store'])->name('front.store.checkout');
+
+//orderline admin
+

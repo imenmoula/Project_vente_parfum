@@ -24,7 +24,7 @@
            </li>
 
             <li>
-                <a href="#" class="ai-icon" aria-expanded="false">
+                <a href="{{ url('admin/order/index') }}" class="ai-icon" aria-expanded="false">
                     
                     <span class="nav-text">Commande</span>
                 </a>

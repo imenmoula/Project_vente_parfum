@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>Parfum Elegant </title>
-    <link rel="icon" href="{{ asset('user/assets/images/logo-black.png') }}" type="image/png"
+    <link rel="icon" href="{{ asset('images/1.jfif') }}" type="image/png"
         sizes="16x16">
 
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}"
@@ -136,8 +136,8 @@
                     <h3> {{  $cartTotal }} DT</h3>
                 </div>
                 <div class="cart-modal-button">
-                    <a href="#" class="btn full-width">Voir le panier </a>
-                    <a href="#" class="btn btn-yellow full-width">Commander</a>
+                    <a href="{{ route('cart.list') }}" class="btn full-width">Voir le panier </a>
+                    <a href="{{ route('front.includes.checkout')  }}" class="btn btn-yellow full-width">Commander</a>
                 </div>
 
 
