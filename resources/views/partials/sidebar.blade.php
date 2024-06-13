@@ -32,7 +32,7 @@
 
 
             <li>
-                <a href="{{ url('admin/User/index') }}" class="ai-icon" aria-expanded="false">
+                <a href="{{ url('User/index') }}" class="ai-icon" aria-expanded="false">
                     
                     <span class="nav-text">Utilisateur</span>
                 </a>

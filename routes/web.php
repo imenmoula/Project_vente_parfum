@@ -61,7 +61,9 @@ Route::prefix('admin')->group(function () {
 
 });
 
-Route::get('User/index', 'UserController@index')->name('User.index');
+// Route::get('User/index', 'UserController@index')->name('User.index');
+Route::get('User/index', [UserController::class, 'index'])->name('User.index');
+
 
 
 Route::prefix('front')->group(function () {

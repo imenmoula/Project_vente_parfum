@@ -34,7 +34,7 @@
                                         <div class="combo-shape-inner">
                                             
                                                 <small>Seulement à</small>
-                                                <p> {{ $promotion->parfum->prix * (1 - $promotion->pourcentage / 100) }} dt</p>
+                                                <p> {{ $promotion->parfum->prix * (1 - $promotion->parfum->pourcentage / 100) }} dt</p>
                                               
                                            
                                         </div>
@@ -78,7 +78,7 @@
                                                     <h4>{{ $p->prix }}Dt</del></h4>
                                                 </div>
                                                 <div class="receipe-cart">
-                                                    <a href="{{ route('cart.store', $p->id) }}">
+                                                    <a href="{{ route('front.includes.detailParfum',$p->id	) }}">
                                                         <i class="flaticon-supermarket-basket"></i>
                                                         <i class="flaticon-supermarket-basket"></i>
                                                     </a>

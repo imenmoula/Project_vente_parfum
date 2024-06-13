@@ -30,20 +30,15 @@
                                         <th><strong>ID#</strong></th>
                                         <th><strong>Nom & Prenom</strong></th>
                                         <th><strong>Email</strong></th>
-                                        <th><strong>role</strong></th>
-                                        <th><strong>Adresse</strong></th>
-                                        <th><strong>Telephone</strong></th>
-                                        <th><strong>Actions</strong></th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($user as $u)
+                                    @foreach ($data as $d)
                                         <tr>
-                                            <td><strong>{{$u->index+1}}</strong></td>
-                                            <td><strong>{{$u->name}}</strong></td>
-                                            <td><strong>{{$u->email}}</strong></td>
-                                            <td><strong>{{$u->role}}</strong></td>
-                                            <td>
+                                            <td><strong>{{$d->index+1}}</strong></td>
+                                            <td><strong>{{$d->name}}</strong></td>
+                                            <td><strong>{{$d->email}}</strong></td>
                                             
                                         
                                         </tr>

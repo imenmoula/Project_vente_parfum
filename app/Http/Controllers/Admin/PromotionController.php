@@ -25,6 +25,7 @@ class PromotionController extends Controller
 
     public function store(Request $request)
     {
+        
         $request->validate([
             'nom_promotio' => 'required|max:255',
             'description' => 'required|max:255',
